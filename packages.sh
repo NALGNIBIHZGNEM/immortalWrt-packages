@@ -43,7 +43,7 @@ git clone --depth=1 https://github.com/linkease/istore && mvdir istore/luci
 
 
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-aliddns
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-linkease linkease ffmpeg-remux
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-linkease linkease linkmount ffmpeg-remux
 
 
 git_sparse_clone main https://github.com/haiibo/packages luci-app-wrtbwmon wrtbwmon luci-app-onliner
