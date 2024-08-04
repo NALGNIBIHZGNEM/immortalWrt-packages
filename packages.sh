@@ -32,7 +32,7 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall passwall && mv
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
 git clone --depth=1 -b main https://github.com/fw876/helloworld && mv helloworld/luci-app-ssr-plus ./
 
-git clone --depth=1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
+#git clone --depth=1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
 #git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
 #git_sparse_clone master https://github.com/lisaac/luci-app-dockerman applications/luci-app-dockerman
 #git_sparse_clone master https://github.com/immortalwrt/packages net/adguardhome
