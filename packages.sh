@@ -19,6 +19,9 @@ function mvdir() {
 
 #全能推送
 git clone --depth=1 https://github.com/zzsj0928/luci-app-pushbot
+
+# luci-app-autotimeset 任务设置2.0版：原定时设置的升级，开机任务设置和定时设置任务二合一， 预置功能：重启、关机、重启网络、释放内存、系统清理、网络共享、关闭网络、自动检测断网重连、MWAN3负载均衡检测重连、自定义脚本等10多个功能.
+git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset
 #主题
 #git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
@@ -27,10 +30,10 @@ git clone --depth=1 https://github.com/zzsj0928/luci-app-pushbot
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages openwrt-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall passwall && mvdir passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
-git clone --depth=1 -b main https://github.com/fw876/helloworld && mv helloworld/luci-app-ssr-plus ./
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages openwrt-passwall
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall passwall && mvdir passwall
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
+#git clone --depth=1 -b main https://github.com/fw876/helloworld && mv helloworld/luci-app-ssr-plus ./
 
 #git clone --depth=1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
 #git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
@@ -42,11 +45,11 @@ git clone --depth=1 https://github.com/linkease/istore-ui && mvdir istore-ui
 git clone --depth=1 https://github.com/linkease/istore && mvdir istore/luci
 
 
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-aliddns
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-linkease linkease linkmount ffmpeg-remux
+#git_sparse_clone master https://github.com/kenzok8/openwrt-packages luci-app-aliddns
+#git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-linkease linkease linkmount ffmpeg-remux
 
 
-git_sparse_clone main https://github.com/haiibo/packages luci-app-wrtbwmon wrtbwmon luci-app-onliner
+#git_sparse_clone main https://github.com/haiibo/packages luci-app-wrtbwmon wrtbwmon luci-app-onliner
 
 rm -rf ./*/.git* ./*/LICENSE
 find ./*/ -type f -name '*.md' -print -exec rm -rf {} \;
