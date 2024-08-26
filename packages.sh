@@ -18,7 +18,7 @@ function mvdir() {
 }
 
 #全能推送
-git clone --depth=1 https://github.com/zzsj0928/luci-app-pushbot
+#git clone --depth=1 https://github.com/zzsj0928/luci-app-pushbot
 
 # luci-app-autotimeset 任务设置2.0版：原定时设置的升级，开机任务设置和定时设置任务二合一， 预置功能：重启、关机、重启网络、释放内存、系统清理、网络共享、关闭网络、自动检测断网重连、MWAN3负载均衡检测重连、自定义脚本等10多个功能.
 git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset
@@ -27,7 +27,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-autotimeset
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 #git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
 #git clone --depth=1 https://github.com/Jason6111/luci-app-netdata
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
+#git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages openwrt-passwall

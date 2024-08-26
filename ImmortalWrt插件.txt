@@ -1,0 +1,31 @@
+<*> luci-app-adbyby-plus............................. LuCI support for Adbyby
+<*> luci-app-adguardhome............................ LuCI app for adguardhome
+<*> luci-app-advancedsetting................ LuCI Support for advancedsetting
+<*> luci-app-arpbind............................................. ARP Binding
+<*> luci-app-autotimeset............. LuCI support for Scheduled Time setting
+<*> luci-app-diskman......................... Disk Manager interface for LuCI
+[*] Include btrfs-progs                                                      
+[*] Include lsblk                                                            
+[ ] Include mdadm                                                            
+<*> luci-app-filebrowser............................ LuCI app for FileBrowser
+-*- luci-app-firewall................ Firewall and Portforwarding application
+<*> luci-app-netdata................................ LuCI support for netdata
+<*> luci-app-passwall.............................. LuCI support for PassWall
+    Configuration  --->                                                      
+<*> luci-app-ramfree........................................ luci-app-ramfree
+<*> luci-app-statistics.......................... LuCI Statistics Application
+<*> luci-app-store...................................... LuCI based ipk store
+<*> luci-app-ttyd. ttyd - Command-line tool for sharing terminal over the web
+<*> luci-app-upnp................. Universal Plug & Play configuration module
+<*> luci-app-vlmcsd........................................ LuCI page for KMS
+<*> luci-app-vnstat2............................... LuCI Support for vnStat 2
+<*> luci-app-webrestriction.................. LuCI support for Webrestriction
+<*> luci-app-weburl.................................. LuCI support for Weburl
+<*> luci-app-wechatpush.......................... LuCI support for wechatpush
+[*]   Enable Local Disk Information Detection                                
+[*]   Enable Host Information Detection                                      
+<*> luci-app-wol................................ LuCI Support for Wake-on-LAN
+<*> luci-app-zerotier...................................... LuCI for Zerotier
+
+
+  
