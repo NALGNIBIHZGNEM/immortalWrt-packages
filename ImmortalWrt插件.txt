@@ -1,31 +1,82 @@
-<*> luci-app-adbyby-plus............................. LuCI support for Adbyby
-<*> luci-app-adguardhome............................ LuCI app for adguardhome
-<*> luci-app-advancedsetting................ LuCI Support for advancedsetting
-<*> luci-app-arpbind............................................. ARP Binding
-<*> luci-app-autotimeset............. LuCI support for Scheduled Time setting
-<*> luci-app-diskman......................... Disk Manager interface for LuCI
-[*] Include btrfs-progs                                                      
-[*] Include lsblk                                                            
-[ ] Include mdadm                                                            
-<*> luci-app-filebrowser............................ LuCI app for FileBrowser
--*- luci-app-firewall................ Firewall and Portforwarding application
-<*> luci-app-netdata................................ LuCI support for netdata
-<*> luci-app-passwall.............................. LuCI support for PassWall
-    Configuration  --->                                                      
-<*> luci-app-ramfree........................................ luci-app-ramfree
-<*> luci-app-statistics.......................... LuCI Statistics Application
-<*> luci-app-store...................................... LuCI based ipk store
-<*> luci-app-ttyd. ttyd - Command-line tool for sharing terminal over the web
-<*> luci-app-upnp................. Universal Plug & Play configuration module
-<*> luci-app-vlmcsd........................................ LuCI page for KMS
-<*> luci-app-vnstat2............................... LuCI Support for vnStat 2
-<*> luci-app-webrestriction.................. LuCI support for Webrestriction
-<*> luci-app-weburl.................................. LuCI support for Weburl
-<*> luci-app-wechatpush.......................... LuCI support for wechatpush
-[*]   Enable Local Disk Information Detection                                
-[*]   Enable Host Information Detection                                      
-<*> luci-app-wol................................ LuCI Support for Wake-on-LAN
-<*> luci-app-zerotier...................................... LuCI for Zerotier
+打开菜单后 按照下述步骤设置，首先配置插件，选完插件后，插件所需依赖也会变成必选
+
+> LuCI > 4. Themes > (除去必选和下面的之外，其余全部取消)
+	<*> luci-theme-argon............................................. Argon Theme
+	-*- luci-theme-bootstrap........................... Bootstrap Theme (default)
+
+> LuCI > 3. Applications > (除去必选和下面的之外，其余全部取消)
+	<*> luci-app-adbyby-plus............................. LuCI support for Adbyby
+	<*> luci-app-adguardhome............................ LuCI app for adguardhome
+	<*> luci-app-advancedsetting................ LuCI Support for advancedsetting
+	<*> luci-app-arpbind............................................. ARP Binding
+	<*> luci-app-autotimeset............. LuCI support for Scheduled Time setting
+	<*> luci-app-diskman......................... Disk Manager interface for LuCI
+	[*] Include btrfs-progs                                                      
+	[*] Include lsblk                                                            
+	[ ] Include mdadm                                                            
+	<*> luci-app-filebrowser............................ LuCI app for FileBrowser
+	-*- luci-app-firewall................ Firewall and Portforwarding application
+	<*> luci-app-netdata................................ LuCI support for netdata
+	<*> luci-app-passwall.............................. LuCI support for PassWall
+		Configuration  --->
+			[*] Include Haproxy
+			[ ] Include Hysteria
+			[ ] Include NaiveProxy
+			[*] Include Shadowsocks Libev Client
+			[*] Include Shadowsocks Libev Server
+			[ ] Include Shadowsocks Rust Client
+			[ ] Include Shadowsocks Rust Server
+			[*] Include ShadowsocksR Libev Client
+			[*] Include ShadowsocksR Libev Server
+			[*] Include Simple-Obfs (Shadowsocks Plugin)
+			[*] Include Sing-Box
+			[*] Include Trojan-Plus
+			[ ] Include tuic-client
+			[ ] Include V2ray_Geodata
+			[*] Include V2ray-Plugin (Shadowsocks Plugin)
+			[*] Include Xray
+			[ ] Include Xray-Plugin (Shadowsocks Plugin)
+	<*> luci-app-ramfree........................................ luci-app-ramfree
+	<*> luci-app-statistics.......................... LuCI Statistics Application
+	<*> luci-app-store...................................... LuCI based ipk store
+	<*> luci-app-ttyd. ttyd - Command-line tool for sharing terminal over the web
+	<*> luci-app-upnp................. Universal Plug & Play configuration module
+	<*> luci-app-vlmcsd........................................ LuCI page for KMS
+	<*> luci-app-vnstat2............................... LuCI Support for vnStat 2
+	<*> luci-app-webrestriction.................. LuCI support for Webrestriction
+	<*> luci-app-weburl.................................. LuCI support for Weburl
+	<*> luci-app-wechatpush.......................... LuCI support for wechatpush
+	[*]   Enable Local Disk Information Detection                                
+	[*]   Enable Host Information Detection                                      
+	<*> luci-app-wol................................ LuCI Support for Wake-on-LAN
+	<*> luci-app-zerotier...................................... LuCI for Zerotier
 
 
-  
+ > Target Images > (更改配置)
+	(1) Seconds to wait before booting the default entry
+	(32) Kernel partition size (in MiB)
+	(666) Root filesystem partition size (in MiB)
+
+
+> Kernel modules > 
+	> Network Support(除去必选和下面的之外，其余全部取消)
+		<*> kmod-e1000.................... Intel(R) PRO/1000 PCI cards kernel support
+		<*> kmod-e1000e.................. Intel(R) PRO/1000 PCIe cards kernel support
+		<*> kmod-igc................ Intel(R) Ethernet Controller I225 Series support
+		<*> kmod-vmxnet3.............................. VMware VMXNET3 ethernet driver
+	> Sound Support(除去必选，其余全部取消)
+	> USB Support(除去必选，其余全部取消)
+	> Video Support(除去必选，其余全部取消)
+	> Virtualization
+		<*> kmod-kvm-x86.................. Kernel-based Virtual Machine (KVM) support 
+
+> Utilities > (添加)
+	-*- open-vm-tools.............................................. open-vm-tools
+	<*> open-vm-tools-fuse.................................... open-vm-tools-fuse 
+
+
+
+注意：
+1、使用 cat .config | grep "tables-nft" 检查插件是否使用iptables
+2、zerotier会在启动的时候，修改防火墙规则，具体修改文件在/etc/zerotier.start
+
